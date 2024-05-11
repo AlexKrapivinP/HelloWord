@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello Word!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hbD-nc-dCu">
-                                <rect key="frame" x="16" y="397.66666666666669" width="358" height="49"/>
+                                <rect key="frame" x="16" y="397.66666666666669" width="358" height="48.999999999999943"/>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="42"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -34,7 +34,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-163.25581395348837" y="372.74678111587986"/>
+            <point key="canvasLocation" x="-383" y="391"/>
         </scene>
     </scenes>
     <resources>
