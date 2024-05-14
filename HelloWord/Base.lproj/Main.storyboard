@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_72" orientation="portrait" appearance="light"/>
+    <device id="retina6_72" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -16,45 +16,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ya-T3-R4z">
-                                <rect key="frame" x="20" y="499" width="390" height="399"/>
-                                <color key="backgroundColor" systemColor="systemRedColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bZQ-TS-9Dz">
-                                <rect key="frame" x="20" y="84" width="390" height="399"/>
-                                <color key="backgroundColor" systemColor="tableCellBlueTextColor"/>
-                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, World!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Rxn-Id-N9y">
+                                <rect key="frame" x="16" y="187" width="398" height="49"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="42"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R8A-og-9cG">
+                                <rect key="frame" x="112" y="635" width="208" height="39"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="208" id="Uk1-UU-WGW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Show Greeting">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="showGreetingButtonDitTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ylj-53-4Aj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="bZQ-TS-9Dz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="1K8-Ue-EHt"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bZQ-TS-9Dz" secondAttribute="trailing" constant="20" id="1dm-Aa-gpw"/>
-                            <constraint firstItem="6ya-T3-R4z" firstAttribute="height" secondItem="bZQ-TS-9Dz" secondAttribute="height" id="bCA-83-Vk1"/>
-                            <constraint firstItem="6ya-T3-R4z" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="bsj-ud-4jc"/>
-                            <constraint firstItem="6ya-T3-R4z" firstAttribute="top" secondItem="bZQ-TS-9Dz" secondAttribute="bottom" constant="16" id="e2U-9w-lE1"/>
-                            <constraint firstItem="6ya-T3-R4z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="eCI-dk-CmS"/>
-                            <constraint firstItem="bZQ-TS-9Dz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="mtC-LR-kY2"/>
-                            <constraint firstItem="6ya-T3-R4z" firstAttribute="top" secondItem="bZQ-TS-9Dz" secondAttribute="bottom" constant="16" id="o82-IO-xvE"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6ya-T3-R4z" secondAttribute="trailing" constant="20" id="ydf-Qe-xPs"/>
-                            <constraint firstItem="6ya-T3-R4z" firstAttribute="width" secondItem="bZQ-TS-9Dz" secondAttribute="width" id="zEE-TS-qQo"/>
+                            <constraint firstItem="Rxn-Id-N9y" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="128" id="3MW-NR-G0u"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="R8A-og-9cG" secondAttribute="bottom" multiplier="4:3" id="Dbp-H3-Z1W"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Rxn-Id-N9y" secondAttribute="trailing" constant="16" id="F8d-TJ-KPC"/>
+                            <constraint firstItem="R8A-og-9cG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="1" id="R4G-97-zaN"/>
+                            <constraint firstItem="Rxn-Id-N9y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="b3f-Vu-OXa"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greetingLabel" destination="Rxn-Id-N9y" id="TuR-7n-6wu"/>
+                        <outlet property="showGreetingButton" destination="R8A-og-9cG" id="HXv-cC-Wr5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="898.60465116279067" y="-224.03433476394852"/>
+            <point key="canvasLocation" x="821.8604651162791" y="-295.49356223175965"/>
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="tableCellBlueTextColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
